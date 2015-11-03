@@ -170,10 +170,13 @@ sys 0.02
 
 == Results
 
+:image-uri-cf-push: https://raw.githubusercontent.com/nevenc-pivotal/pcf-environment-performance-test/master/cf_push.png
+:image-uri-cf-delete: https://raw.githubusercontent.com/nevenc-pivotal/pcf-environment-performance-test/master/cf_delete.png
+
 You can feed the results into a spreadsheet for nicer presentation, e.g.
 
-![cf push response times](cf_push.png?raw=true "cf push response times")
-![cf delete response times](cf_delete.png?raw=true "cf delete response times")
+image::{image-uri-cf-push}[cf push response times]
 
+image::{image-uri-cf-delete}[cf delete response times]
 
 
