@@ -2,3 +2,91 @@
 
 This is a set of scripts to help you automate performance metrics of your PCF deployment process.
 
+
+== Install Script
+
+You can simply clone the script to your Mac/Unix/Linux BASH environment, e.g.
+----
+    git clone https://github.com/nevenc-pivotal/pcf-environment-performance-test.git
+    cd pcf-environment-performance-test
+----
+
+
+== Configure Script
+
+In order to make the script work, you need to configure separate directories for each environment, e.g.
+----
+  emea         ~/.cf-emea
+  corp         ~/.cf-corp
+  pws          ~/.cf-pws
+  myorg        ~/.cf-myorg
+  ...
+----
+
+You can set an environment by setting `CF_HOME` to specific environment, and setting target and login, repeat for each environment separately, e.g.
+
+----
+    export CF_HOME=~/cf-emea
+    cf api --skip-ssl-validation https://api.cf.emea.pivotal.io
+    cf login
+    Email> you@emea.pivotal.io
+    Password> **********
+    
+    export CF_HOME=~/cf-corp
+    cf api --skip-ssl-validation https://api.cf.corp.pivotal.io
+    cf login
+    Email> you@corp.pivotal.io
+    Password> **********
+    
+    export CF_HOME=~/cf-pws
+    cf api https://api.run.pivotal.io
+    cf login
+    Email> you@email.com
+    Password> **********
+    
+    export CF_HOME=~/cf-myorg
+    cf api --skip-ssl-validation https://api.cf.myorg.com
+    cf login
+    Email> you@email.com
+    Password> **********
+----
+
+== Execute Script
+
+You can execute script by invoking it directly, e.g.
+
+----
+./test_performance_deploy.sh
+
+Pushing spring-music to emea
+real 78.36
+user 1.75
+sys 1.70
+
+Removing spring-music from emea
+real 9.05
+user 0.07
+sys 0.02
+
+Pushing spring-music to emea-2015
+real 253.44
+user 4.80
+sys 6.29
+
+Removing spring-music from emea-2015
+real 8.28
+user 0.07
+sys 0.02
+
+Pushing spring-music to pws
+real 2.69
+user 0.11
+sys 0.02
+
+Removing spring-music from pws
+real 0.59
+user 0.10
+sys 0.02
+-----
+
+
