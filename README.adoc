@@ -49,7 +49,10 @@ You can set an environment by setting `CF_HOME` to specific environment, and set
     cf login
     Email> you@email.com
     Password> **********
+
 ----
+
+
 
 == Execute Script
 
@@ -96,9 +99,6 @@ You can invoke test script multiple times by invoking the script runner with a n
 ----
 ./run_test_x_times.sh 2
 
-
-./run_test_x_times.sh
-
 run: 1
 
 Pushing spring-music to emea
@@ -130,6 +130,7 @@ Removing spring-music from pws
 real 0.59
 user 0.10
 sys 0.02
+
 
 
 run: 2
@@ -165,5 +166,14 @@ user 0.11
 sys 0.02
 
 ----
+
+
+== Results
+
+You can feed the results into a spreadsheet for nicer presentation, e.g.
+
+![cf push response times](cf_push.png?raw=true "cf push response times")
+![cf delete response times](cf_delete.png?raw=true "cf delete response times")
+
 
 
