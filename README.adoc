@@ -170,8 +170,8 @@ sys 0.02
 
 == Results
 
-:image-uri-cf-push: https://raw.githubusercontent.com/nevenc-pivotal/pcf-environment-performance-test/master/cf_push.png
-:image-uri-cf-delete: https://raw.githubusercontent.com/nevenc-pivotal/pcf-environment-performance-test/master/cf_delete.png
+:image-uri-cf-push: https://raw.githubusercontent.com/nevenc-pivotal/pcf-environment-performance-test/master/images/cf_push.png
+:image-uri-cf-delete: https://raw.githubusercontent.com/nevenc-pivotal/pcf-environment-performance-test/master/images/cf_delete.png
 
 You can feed the results into a spreadsheet for nicer presentation, e.g.
 
