@@ -87,6 +87,83 @@ Removing spring-music from pws
 real 0.59
 user 0.10
 sys 0.02
------
+
+----
+
+
+You can invoke test script multiple times by invoking the script runner with a number parameter, e.g.
+
+----
+./run_test_x_times.sh 2
+
+
+./run_test_x_times.sh
+
+run: 1
+
+Pushing spring-music to emea
+real 78.36
+user 1.75
+sys 1.70
+
+Removing spring-music from emea
+real 9.05
+user 0.07
+sys 0.02
+
+Pushing spring-music to emea-2015
+real 253.44
+user 4.80
+sys 6.29
+
+Removing spring-music from emea-2015
+real 8.28
+user 0.07
+sys 0.02
+
+Pushing spring-music to pws
+real 2.69
+user 0.11
+sys 0.02
+
+Removing spring-music from pws
+real 0.59
+user 0.10
+sys 0.02
+
+
+run: 2
+
+Pushing spring-music to emea
+real 58.17
+user 1.46
+sys 1.21
+
+Removing spring-music from emea
+real 9.17
+user 0.07
+sys 0.02
+
+Pushing spring-music to emea-2015
+real 236.64
+user 4.51
+sys 5.86
+
+Removing spring-music from emea-2015
+real 8.14
+user 0.07
+sys 0.02
+
+Pushing spring-music to pws
+real 1.85
+user 0.12
+sys 0.02
+
+Removing spring-music from pws
+real 0.57
+user 0.11
+sys 0.02
+
+----
 
 
