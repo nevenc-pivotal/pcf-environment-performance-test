@@ -11,7 +11,7 @@ PCF_ENVIRONMENTS="emea emea-2015 pws"
 
 APPLICATION_NAME=spring-music
 APPLICATION_PATH=spring-music.war
-BUILDPACK_NAME=java_buildpack_offline
+BUILDPACK_NAME=java_buildpack
 INSTANCE_COUNT=1
 MEMORY_SIZE=512M
 
@@ -33,7 +33,7 @@ do
   then
     echo "-------------------------------------------------"
     echo "Pushing ${APPLICATION_NAME} to ${PCF_ENVIRONMENT}"
-    time -p cf push ${APPLICATION_NAME} -b ${BUILDPACK_NAME} -i ${INSTANCE_COUNT} -p ${APPLICATION_PATH} -m ${MEMORY_SIZE} -n ${APPLICATION_NAME} > ${PUSH_LOGFILE} 2>&1
+    time -p cf push ${APPLICATION_NAME} -b ${BUILDPACK_NAME} -i ${INSTANCE_COUNT} -p ${APPLICATION_PATH} -m ${MEMORY_SIZE} -n ${HOST_NAME} > ${PUSH_LOGFILE} 2>&1
     echo "------"
     echo "Removing ${APPLICATION_NAME} from ${PCF_ENVIRONMENT}"
     time -p cf delete ${APPLICATION_NAME} -r -f > ${DELETE_LOGFILE} 2>&1
